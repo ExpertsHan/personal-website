@@ -12,10 +12,10 @@ const notoSansTC = Noto_Sans_TC({
 
 export const metadata: Metadata = {
   title: {
-    default: "我的個人網站",
-    template: "%s | 我的個人網站",
+    default: "一笑落塵",
+    template: "%s | 一笑落塵",
   },
-  description: "歡迎來到我的個人網站，這裡有我的作品集和部落格文章。",
+  description: "歡迎來到一笑落塵，這裡有我的作品集和部落格文章。",
 };
 
 export default function RootLayout({
