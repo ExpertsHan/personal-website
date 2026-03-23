@@ -15,6 +15,7 @@ export default defineConfig({
     structureTool({
       structure: (S) =>
         S.list()
+          .id("root")
           .title("內容管理")
           .items([
             // Singleton: 網站設定
