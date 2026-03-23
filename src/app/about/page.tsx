@@ -4,6 +4,8 @@ import { getAbout } from "@/lib/sanity/queries";
 import { urlFor } from "@/lib/sanity/image";
 import PortableTextRenderer from "@/components/PortableTextRenderer";
 
+export const revalidate = 60;
+
 export const metadata: Metadata = {
   title: "關於我",
   description: "了解更多關於我的背景、技能和經歷。",

@@ -3,6 +3,8 @@ import { getHomeData } from "@/lib/sanity/queries";
 import ProjectCard from "@/components/ProjectCard";
 import BlogPostCard from "@/components/BlogPostCard";
 
+export const revalidate = 60;
+
 export default async function HomePage() {
   const { projects, posts } = await getHomeData();
 
@@ -11,7 +13,7 @@ export default async function HomePage() {
       {/* Hero */}
       <section className="py-20 text-center">
         <h1 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">
-          你好，我是 <span className="text-blue-600">[你的名字]</span>
+          你好，我是 <span className="text-blue-600">[一笑落塵]</span>
         </h1>
         <p className="mx-auto max-w-xl text-lg text-gray-500">
           歡迎來到我的個人網站。這裡記錄了我的專案作品和學習心得。

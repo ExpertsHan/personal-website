@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { getProjects } from "@/lib/sanity/queries";
 import ProjectCard from "@/components/ProjectCard";
 
+export const revalidate = 60;
+
 export const metadata: Metadata = {
   title: "專案作品",
   description: "我的專案作品集，包含各類技術專案。",

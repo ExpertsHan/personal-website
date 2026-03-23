@@ -6,6 +6,8 @@ import { getPost, getPosts } from "@/lib/sanity/queries";
 import { urlFor } from "@/lib/sanity/image";
 import PortableTextRenderer from "@/components/PortableTextRenderer";
 
+export const revalidate = 60;
+
 interface Props {
   params: Promise<{ slug: string }>;
 }

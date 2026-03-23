@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { getPosts } from "@/lib/sanity/queries";
 import BlogPostCard from "@/components/BlogPostCard";
 
+export const revalidate = 60;
+
 export const metadata: Metadata = {
   title: "部落格",
   description: "我的部落格文章，分享技術心得和學習筆記。",
