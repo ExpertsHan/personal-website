@@ -7,7 +7,7 @@ const singletonTypes = new Set(["about", "siteSettings"]);
 
 export default defineConfig({
   name: "default",
-  title: "個人網站",
+  title: "一笑落塵",
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET!,
   basePath: "/studio",

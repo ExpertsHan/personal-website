@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     template: "%s | 一笑落塵",
   },
   description: "歡迎來到一笑落塵，這裡有我的作品集和部落格文章。",
+  icons: {
+    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>😊</text></svg>",
+  },
 };
 
 export default function RootLayout({
