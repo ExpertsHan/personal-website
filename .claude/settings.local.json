@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm)",
+      "Bash(printf 'no\\\\nno\\\\n')",
+      "Bash(npx create-next-app@latest /tmp/nextjs-temp --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm)",
+      "Bash(rm -rf /tmp/nextjs-temp)",
+      "Bash(yes \"no\")",
+      "Bash(rsync -av --exclude='.git' --exclude='node_modules' /tmp/nextjs-temp/ /Users/zhanjiahan/Desktop/personal-website/)",
+      "Bash(npm install:*)",
+      "Bash(npx tsc:*)",
+      "Bash(npm run:*)"
+    ]
+  }
+}
