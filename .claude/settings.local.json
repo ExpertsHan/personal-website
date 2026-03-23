@@ -10,7 +10,10 @@
       "Bash(rsync -av --exclude='.git' --exclude='node_modules' /tmp/nextjs-temp/ /Users/zhanjiahan/Desktop/personal-website/)",
       "Bash(npm install:*)",
       "Bash(npx tsc:*)",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
     ]
   }
 }
