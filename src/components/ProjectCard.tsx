@@ -19,7 +19,7 @@ export default function ProjectCard({
   githubUrl,
 }: ProjectCardProps) {
   return (
-    <div className="group rounded-xl border border-gray-100 p-5 transition-shadow hover:shadow-md">
+    <div className="group glass-card p-5">
       {mainImage?.asset && (
         <div className="mb-4 overflow-hidden rounded-lg">
           <Image
@@ -31,19 +31,16 @@ export default function ProjectCard({
           />
         </div>
       )}
-      <h3 className="mb-2 text-lg font-semibold">{title}</h3>
+      <h3 className="mb-2 text-lg font-semibold font-heading">{title}</h3>
       {description && (
-        <p className="mb-3 text-sm leading-relaxed text-gray-600">
+        <p className="mb-3 text-sm leading-relaxed text-muted">
           {description}
         </p>
       )}
       {tags && tags.length > 0 && (
         <div className="mb-4 flex flex-wrap gap-2">
           {tags.map((tag) => (
-            <span
-              key={tag}
-              className="rounded-full bg-gray-100 px-3 py-1 text-xs text-gray-600"
-            >
+            <span key={tag} className="tech-tag">
               {tag}
             </span>
           ))}
@@ -55,7 +52,7 @@ export default function ProjectCard({
             href={projectUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-blue-600 hover:underline"
+            className="text-sm text-accent transition-colors hover:text-accent-secondary"
           >
             查看專案 &rarr;
           </a>
@@ -65,7 +62,7 @@ export default function ProjectCard({
             href={githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-gray-500 hover:underline"
+            className="text-sm text-muted transition-colors hover:text-accent"
           >
             GitHub
           </a>

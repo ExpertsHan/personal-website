@@ -13,8 +13,8 @@ export default async function BlogPage() {
   const posts = await getPosts();
 
   return (
-    <div className="mx-auto max-w-4xl px-6 py-16">
-      <h1 className="mb-12 text-3xl font-bold">部落格</h1>
+    <div className="mx-auto max-w-5xl px-6 py-16">
+      <h1 className="mb-12 text-3xl font-bold font-heading">部落格</h1>
 
       {posts.length > 0 ? (
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -24,7 +24,7 @@ export default async function BlogPage() {
           ))}
         </div>
       ) : (
-        <p className="text-center text-gray-400">
+        <p className="text-center text-muted">
           尚未發布文章。請前往 /studio 新增。
         </p>
       )}

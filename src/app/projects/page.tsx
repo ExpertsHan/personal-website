@@ -13,8 +13,8 @@ export default async function ProjectsPage() {
   const projects = await getProjects();
 
   return (
-    <div className="mx-auto max-w-4xl px-6 py-16">
-      <h1 className="mb-12 text-3xl font-bold">專案作品</h1>
+    <div className="mx-auto max-w-5xl px-6 py-16">
+      <h1 className="mb-12 text-3xl font-bold font-heading">專案作品</h1>
 
       {projects.length > 0 ? (
         <div className="grid gap-6 sm:grid-cols-2">
@@ -24,7 +24,7 @@ export default async function ProjectsPage() {
           ))}
         </div>
       ) : (
-        <p className="text-center text-gray-400">
+        <p className="text-center text-muted">
           尚未新增專案。請前往 /studio 新增。
         </p>
       )}

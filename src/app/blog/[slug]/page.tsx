@@ -39,15 +39,15 @@ export default async function BlogPostPage({ params }: Props) {
     <article className="mx-auto max-w-3xl px-6 py-16">
       <Link
         href="/blog"
-        className="mb-8 inline-block text-sm text-gray-500 hover:text-black"
+        className="mb-8 inline-block text-sm text-muted transition-colors hover:text-accent"
       >
         &larr; 返回部落格
       </Link>
 
-      <h1 className="mb-4 text-3xl font-bold sm:text-4xl">{post.title}</h1>
+      <h1 className="mb-4 text-3xl font-bold font-heading sm:text-4xl">{post.title}</h1>
 
       {post.publishedAt && (
-        <time className="mb-8 block text-sm text-gray-400">
+        <time className="mb-8 block text-sm text-muted">
           {new Date(post.publishedAt).toLocaleDateString("zh-TW")}
         </time>
       )}
@@ -59,7 +59,7 @@ export default async function BlogPostPage({ params }: Props) {
             alt={post.mainImage.alt || post.title}
             width={800}
             height={450}
-            className="w-full object-cover"
+            className="w-full object-cover ring-1 ring-border"
           />
         </div>
       )}

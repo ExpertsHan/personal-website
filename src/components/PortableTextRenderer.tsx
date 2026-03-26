@@ -14,10 +14,10 @@ const components: PortableTextComponents = {
             alt={value.alt || ""}
             width={800}
             height={450}
-            className="rounded-lg"
+            className="rounded-lg ring-1 ring-border"
           />
           {value.alt && (
-            <figcaption className="mt-2 text-center text-sm text-gray-500">
+            <figcaption className="mt-2 text-center text-sm text-muted">
               {value.alt}
             </figcaption>
           )}
@@ -27,16 +27,16 @@ const components: PortableTextComponents = {
   },
   block: {
     h2: ({ children }) => (
-      <h2 className="mb-4 mt-8 text-2xl font-semibold">{children}</h2>
+      <h2 className="mb-4 mt-8 text-2xl font-semibold font-heading">{children}</h2>
     ),
     h3: ({ children }) => (
-      <h3 className="mb-3 mt-6 text-xl font-semibold">{children}</h3>
+      <h3 className="mb-3 mt-6 text-xl font-semibold font-heading">{children}</h3>
     ),
     normal: ({ children }) => (
-      <p className="mb-4 leading-relaxed text-gray-700">{children}</p>
+      <p className="mb-4 leading-relaxed text-muted">{children}</p>
     ),
     blockquote: ({ children }) => (
-      <blockquote className="my-6 border-l-4 border-gray-200 pl-4 italic text-gray-600">
+      <blockquote className="my-6 border-l-4 border-accent/30 pl-4 italic text-muted">
         {children}
       </blockquote>
     ),
@@ -47,7 +47,7 @@ const components: PortableTextComponents = {
         href={value?.href}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-blue-600 underline hover:text-blue-800"
+        className="text-accent underline transition-colors hover:text-accent-secondary"
       >
         {children}
       </a>

@@ -14,9 +14,9 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="border-b border-gray-100">
-      <nav className="mx-auto flex max-w-4xl items-center justify-between px-6 py-4">
-        <Link href="/" className="text-lg font-semibold tracking-tight">
+    <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-lg">
+      <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
+        <Link href="/" className="text-lg font-semibold tracking-tight font-heading gradient-text">
           一笑落塵
         </Link>
         <ul className="flex gap-6">
@@ -24,10 +24,10 @@ export default function Header() {
             <li key={href}>
               <Link
                 href={href}
-                className={`text-sm transition-colors hover:text-black ${
+                className={`text-sm transition-colors hover:text-accent ${
                   pathname === href
-                    ? "text-black font-medium"
-                    : "text-gray-500"
+                    ? "text-accent font-medium"
+                    : "text-muted"
                 }`}
               >
                 {label}

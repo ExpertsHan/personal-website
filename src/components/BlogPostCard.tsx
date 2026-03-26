@@ -20,7 +20,7 @@ export default function BlogPostCard({
   return (
     <Link
       href={`/blog/${slug.current}`}
-      className="group block rounded-xl border border-gray-100 p-5 transition-shadow hover:shadow-md"
+      className="group block glass-card p-5"
     >
       {mainImage?.asset && (
         <div className="mb-4 overflow-hidden rounded-lg">
@@ -33,16 +33,16 @@ export default function BlogPostCard({
           />
         </div>
       )}
-      <h3 className="mb-2 text-lg font-semibold group-hover:text-blue-600">
+      <h3 className="mb-2 text-lg font-semibold font-heading group-hover:text-accent">
         {title}
       </h3>
       {publishedAt && (
-        <time className="mb-2 block text-sm text-gray-400">
+        <time className="mb-2 block text-sm text-muted">
           {new Date(publishedAt).toLocaleDateString("zh-TW")}
         </time>
       )}
       {excerpt && (
-        <p className="text-sm leading-relaxed text-gray-600">{excerpt}</p>
+        <p className="text-sm leading-relaxed text-muted">{excerpt}</p>
       )}
     </Link>
   );

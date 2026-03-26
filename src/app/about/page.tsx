@@ -16,7 +16,7 @@ export default async function AboutPage() {
 
   if (!about) {
     return (
-      <div className="mx-auto max-w-3xl px-6 py-20 text-center text-gray-400">
+      <div className="mx-auto max-w-3xl px-6 py-20 text-center text-muted">
         <p>尚未新增「關於我」的內容。請前往 /studio 編輯。</p>
       </div>
     );
@@ -24,7 +24,7 @@ export default async function AboutPage() {
 
   return (
     <div className="mx-auto max-w-3xl px-6 py-16">
-      <h1 className="mb-12 text-3xl font-bold">
+      <h1 className="mb-12 text-3xl font-bold font-heading">
         {about.heading || "關於我"}
       </h1>
 
@@ -36,7 +36,7 @@ export default async function AboutPage() {
               alt="個人照片"
               width={240}
               height={240}
-              className="rounded-2xl object-cover"
+              className="rounded-2xl object-cover ring-1 ring-border"
             />
           </div>
         )}
@@ -48,13 +48,10 @@ export default async function AboutPage() {
 
       {about.skills && about.skills.length > 0 && (
         <section className="mt-12">
-          <h2 className="mb-4 text-xl font-semibold">技能</h2>
+          <h2 className="mb-4 text-xl font-semibold font-heading">技能</h2>
           <div className="flex flex-wrap gap-2">
             {about.skills.map((skill: string) => (
-              <span
-                key={skill}
-                className="rounded-full bg-gray-100 px-4 py-2 text-sm"
-              >
+              <span key={skill} className="tech-tag">
                 {skill}
               </span>
             ))}
@@ -64,12 +61,12 @@ export default async function AboutPage() {
 
       {(about.email || about.socialLinks?.length > 0) && (
         <section className="mt-12">
-          <h2 className="mb-4 text-xl font-semibold">聯絡方式</h2>
+          <h2 className="mb-4 text-xl font-semibold font-heading">聯絡方式</h2>
           <div className="flex flex-wrap gap-4">
             {about.email && (
               <a
                 href={`mailto:${about.email}`}
-                className="text-sm text-blue-600 hover:underline"
+                className="text-sm text-accent transition-colors hover:text-accent-secondary"
               >
                 {about.email}
               </a>
@@ -81,7 +78,7 @@ export default async function AboutPage() {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-blue-600 hover:underline"
+                  className="text-sm text-accent transition-colors hover:text-accent-secondary"
                 >
                   {link.platform}
                 </a>
